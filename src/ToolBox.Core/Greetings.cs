@@ -1,6 +1,6 @@
 namespace ToolBox.Core {
-	static class Greeting {
-		static string Build() {
+	static public class Greeting {
+		static public string Build() {
 			return ("Hello from toolbox");
 		}
 	}
