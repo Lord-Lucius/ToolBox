@@ -5,7 +5,7 @@ namespace ToolBox.Commands.Commands
 	public class HelloCommand : ICommand
 	{
 		public string Name => "hello";
-		public string Description => "test command";
+		public string Description => "hello command";
 		public string Category => "Misc";
 		public IReadOnlyList<ParamSpec> Parameters => Array.Empty<ParamSpec>();
 

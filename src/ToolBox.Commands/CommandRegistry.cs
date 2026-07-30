@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.ObjectModel;
 using ToolBox.Commands.Commands;
 
 namespace ToolBox.Commands;
 
 public class CommandRegistry
 {
-	private Dictionary<string, ICommand> commands = new(StringComparer.OrdinalIgnoreCase);
+	private readonly Dictionary<string, ICommand> commands = new(StringComparer.OrdinalIgnoreCase);
 
 	public CommandRegistry()
 	{
@@ -47,7 +45,7 @@ public class CommandRegistry
 		return cmd.Execute(args);
 	}
 
-	public string Validate(ICommand cmd, IReadOnlyList<string> args)
+	public static string Validate(ICommand cmd, IReadOnlyList<string> args)
 	{
 		int required = cmd.Parameters.Count<ParamSpec>(param => param.Required);
 
