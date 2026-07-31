@@ -23,9 +23,7 @@ public class CommandRegistry
 
 	public ICommand? TryResolve(string name)
 	{
-		ICommand? t = null;
-
-		commands.TryGetValue(name, out t);
+		commands.TryGetValue(name, out ICommand? t);
 		return t;
 	}
 
