@@ -7,14 +7,14 @@ public class ToolBox
 {
 	public static int Main(string[]? args)
 	{
-		CommandRegistry registry = new CommandRegistry();
+		CommandRegistry registry = new();
 
 		if (args == null || args.Length == 0)
 		{
-			Console.Write(HelpText.Build(registry));
+			Tui.Run_tui(registry);
 			return 0;
 		}
-		if (args[0] == "--help" || args[0] == "-h")
+		if (args == null || args[0] is "--help" or "-h")
 		{
 			Console.Write(HelpText.Build(registry));
 			return 0;
