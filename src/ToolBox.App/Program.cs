@@ -11,7 +11,7 @@ public class ToolBox
 
 		if (args == null || args.Length == 0)
 		{
-			Tui.Run_tui(registry);
+			Tui.RunTui(registry);
 			return 0;
 		}
 		if (args == null || args[0] is "--help" or "-h")
@@ -19,7 +19,7 @@ public class ToolBox
 			Console.Write(HelpText.Build(registry));
 			return 0;
 		}
-		CommandResult result = registry.Run(args[0], args[1..]);
+		CommandResult result = registry.Run(args);
 		if (result.Output != "")
 			Console.WriteLine(result.Output);
 		if (result.Error != "")

@@ -1,17 +1,14 @@
 using ToolBox.Core;
 
-namespace ToolBox.Commands.Commands
-{
-	public class HelloCommand : ICommand
-	{
-		public string Name => "hello";
-		public string Description => "hello command";
-		public string Category => "Misc";
-		public IReadOnlyList<ParamSpec> Parameters => Array.Empty<ParamSpec>();
+namespace ToolBox.Commands.Commands;
 
-		public CommandResult Execute(IReadOnlyList<string> args)
-		{
-			return CommandResult.Ok(Greeting.Build());
-		}
-	}
+public class HelloCommand : IAction
+{
+	public string Name => "hello";
+	public string Description => "test command";
+	public string Category => "Misc";
+	public IReadOnlyList<ParamSpec> Parameters => Array.Empty<ParamSpec>();
+
+	public CommandResult Execute(IReadOnlyList<string> args)
+		=> CommandResult.Ok(Greeting.Build());
 }
