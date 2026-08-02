@@ -1,6 +1,6 @@
 using ToolBox.Core;
 
-namespace ToolBox.Tests;
+namespace ToolBox.Tests.commands;
 
 public class CyclicPatternTests
 {

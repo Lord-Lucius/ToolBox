@@ -19,6 +19,6 @@ public class PatternOffsetCommand : IAction
 
 		if (offset < 0)
 			return CommandResult.Fail("not found in pattern", 1);
-		return CommandResult.Ok("Offset found at :" + offset);
+		return CommandResult.Ok("Offset found at: " + offset);
 	}
 }

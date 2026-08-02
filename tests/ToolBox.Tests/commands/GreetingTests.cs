@@ -1,7 +1,7 @@
 using Xunit;
 using ToolBox.Core;
 
-namespace ToolBox.Tests;
+namespace ToolBox.Tests.commands;
 
 public class GreetingTests
 {

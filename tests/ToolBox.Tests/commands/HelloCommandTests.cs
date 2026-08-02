@@ -2,7 +2,7 @@ using Xunit;
 using ToolBox.Commands.Commands;
 using ToolBox.Core;
 
-namespace ToolBox.Tests;
+namespace ToolBox.Tests.commands;
 
 public class HelloCommandTests
 {

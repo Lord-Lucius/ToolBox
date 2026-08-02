@@ -9,6 +9,7 @@ public class CommandRegistry
 	public CommandRegistry()
 	{
 		Register(new HelloCommand());
+		Register(new PatternGroup());
 	}
 
 	public void Register(ICommandBase cmd)
@@ -38,7 +39,7 @@ public class CommandRegistry
 			return CommandResult.Fail("unknown command: " + args[0], 127);
 
 		if (entry is IAction action)
-			return ExecuteAction(action, args.Skip(1).ToList());
+			return ExecuteAction(action, [.. args.Skip(1)]);
 
 		if (entry is IGroup group)
 		{
