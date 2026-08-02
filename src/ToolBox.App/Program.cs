@@ -12,7 +12,7 @@ public class ToolBox
 
 		if (args == null || args.Length == 0)
 		{
-			Tui.RunTui(registry);
+			Tui.Run(registry);
 			return 0;
 		}
 		if (args == null || args[0] is "--help" or "-h")
