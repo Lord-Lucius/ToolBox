@@ -1,4 +1,5 @@
 using Terminal.Gui.App;
+using ToolBox.App.UI.Shell;
 using ToolBox.Commands;
 
 namespace ToolBox.App.UI;
