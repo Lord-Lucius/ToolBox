@@ -6,7 +6,7 @@ namespace ToolBox.App.UI;
 
 public static class Tui
 {
-	public static void RunTui(CommandRegistry registry)
+	public static void Run(CommandRegistry registry)
 	{
 		using IApplication app = Application.Create();
 		app.Init();
